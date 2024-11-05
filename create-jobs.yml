@@ -1,6 +1,6 @@
 - name: create jenkins jobs
   become: yes
-  connection: ssh
+  connection: localhost
   hosts: all
   roles:
     - Jenkins
