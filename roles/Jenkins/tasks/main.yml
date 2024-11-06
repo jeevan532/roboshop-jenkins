@@ -15,7 +15,7 @@
 #    - catalogue
 #    - cart
 - name: Include task list in play
-  ansible.builtin.include_tasks: pipeline.yml
+  ansible.builtin.include_tasks: folder.yml
   loop:
     - ci-pipeline
 - name: Include task list in play
