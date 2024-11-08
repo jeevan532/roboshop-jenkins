@@ -23,3 +23,7 @@
   loop:
     - { name: "frontend", dir: "ci-pipeline" }
     - { name: "cart", dir: "ci-pipeline" }
+    - { name: "catalogue", dir: "ci-pipeline" }
+    - { name: "payment", dir: "ci-pipeline" }
+    - { name: "shipping", dir: "ci-pipeline" }
+      { name: "user", dir: "ci-pipeline" }
