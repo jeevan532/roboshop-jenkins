@@ -11,8 +11,8 @@
     password: admin123
     url: http://172.31.19.57:8080
     user: admin
-  loop:
-    - ci-pipeline
+  loop: "{{folders}}"
+
 
 
 - name: copy config file
