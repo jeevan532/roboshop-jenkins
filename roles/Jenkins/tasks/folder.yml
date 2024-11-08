@@ -1,6 +1,6 @@
 - name: copy config file
   ansible.builtin.template:
-    src: job.xml
+    src: folder.xml
     dest: /tmp/folder.xml
 #  loop:
 #    - src: job.xml
