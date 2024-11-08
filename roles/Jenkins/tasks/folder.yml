@@ -2,11 +2,7 @@
   ansible.builtin.template:
     src: folder.xml
     dest: /tmp/folder.xml
-#  loop:
-#    - src: job.xml
-#      dest: /tmp/job.xml
-#    - src: folder.xml
-#      dest: /tmp/folder.xml
+
 
 - name: Create a jenkins job
   community.general.jenkins_job:
