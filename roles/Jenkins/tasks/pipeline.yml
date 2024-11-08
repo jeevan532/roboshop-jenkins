@@ -1,18 +1,5 @@
 - name: copy config file
   ansible.builtin.template:
-    src: job.xml
-    dest: /tmp/job.xml
-
-- name: Create a jenkins job
-  community.general.jenkins_job:
-    config: "{{ lookup('file', '/tmp/job.xml') }}"
-    name: "{{item.dir}}/{{item.name}}"
-    password: admin123
-    url: http://172.31.19.57:8080
-    user: admin
-
-- name: copy config file
-  ansible.builtin.template:
     src: folder.xml
     dest: /tmp/folder.xml
 
@@ -24,3 +11,18 @@
     password: admin123
     url: http://172.31.19.57:8080
     user: admin
+
+
+- name: copy config file
+  ansible.builtin.template:
+    src: job.xml
+    dest: /tmp/job.xml
+
+- name: Create a jenkins job
+  community.general.jenkins_job:
+    config: "{{ lookup('file', '/tmp/job.xml') }}"
+    name: "{{item.dir}}/{{item.name}}"
+    password: admin123
+    url: http://172.31.19.57:8080
+    user: admin
+
