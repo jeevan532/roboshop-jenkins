@@ -1,4 +1,6 @@
 IP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=jenkins" --query 'Reservations[*].Instances[*].PublicIpAddress' --output text)
+# create delete upsert a route53 record go and google it
+
 echo '
 {
   "Comment": "CREATE/DELETE/UPSERT a record ",
